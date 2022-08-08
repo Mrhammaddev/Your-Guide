@@ -7,9 +7,13 @@ class TripDetails extends StatefulWidget {
   final String image;
   final String location;
   final String date;
+  final String imagee;
 
-  const TripDetails( String imagee, {required Key key,   required this.image , required this.location, required this.date})
-      : super(key: key);
+  TripDetails(
+      {required this.imagee,
+      required this.image,
+      required this.location,
+      required this.date});
 
   @override
   _TripDetailsState createState() => _TripDetailsState();
@@ -98,7 +102,7 @@ class _TripDetailsState extends State<TripDetails> {
                       Radius.circular(15),
                     ),
                     child: Image.asset(
-                      _myTrips[index].imagee,
+                      _myTrips[index].image,
                       fit: BoxFit.cover,
                     ),
                   ),

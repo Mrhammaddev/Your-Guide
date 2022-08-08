@@ -41,14 +41,18 @@ class MyTripPage extends StatelessWidget {
                 itemCount: _myTrips.length,
                 itemBuilder: (_, index) {
                   return InkWell(
-                    onTap: (){
-                      Navigator.push(context, MaterialPageRoute(
-                        builder: (_) => TripDetails(
-                          image: _myTrips[index].image,
-                          location: _myTrips[index].location,
-                          date:  _myTrips[index].date,
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => TripDetails(
+                            imagee: _myTrips[index].image,
+                            image: _myTrips[index].image,
+                            location: _myTrips[index].location,
+                            date: _myTrips[index].date,
+                          ),
                         ),
-                      ),);
+                      );
                     },
                     child: Container(
                       margin: EdgeInsets.only(bottom: 20),
@@ -56,12 +60,23 @@ class MyTripPage extends StatelessWidget {
                         children: <Widget>[
                           Row(
                             children: <Widget>[
-                              Icon(Icons.location_on,color: Colors.black,),
-                              SizedBox(width: 5,),
-                              Text(_myTrips[index].location,style: TextStyle(fontSize: 18,color: Colors.black),)
+                              Icon(
+                                Icons.location_on,
+                                color: Colors.black,
+                              ),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              Text(
+                                _myTrips[index].location,
+                                style: TextStyle(
+                                    fontSize: 18, color: Colors.black),
+                              )
                             ],
                           ),
-                          SizedBox(height: 10,),
+                          SizedBox(
+                            height: 10,
+                          ),
                           Stack(
                             children: <Widget>[
                               Container(
@@ -84,10 +99,9 @@ class MyTripPage extends StatelessWidget {
                                   child: Text(
                                     _myTrips[index].title,
                                     style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 22,
-                                      color: Colors.white
-                                    ),
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 22,
+                                        color: Colors.white),
                                   ),
                                 ),
                               ),
@@ -100,8 +114,7 @@ class MyTripPage extends StatelessWidget {
                                     style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         fontSize: 16,
-                                        color: Colors.white
-                                    ),
+                                        color: Colors.white),
                                   ),
                                 ),
                               ),
@@ -114,8 +127,7 @@ class MyTripPage extends StatelessWidget {
                                     style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         fontSize: 18,
-                                        color: Colors.white
-                                    ),
+                                        color: Colors.white),
                                   ),
                                 ),
                               )
